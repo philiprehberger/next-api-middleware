@@ -1,6 +1,6 @@
 # @philiprehberger/next-api-middleware
 
-[![CI](https://github.com/philiprehberger/next-api-middleware/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/next-api-middleware/actions/workflows/publish.yml)
+[![CI](https://github.com/philiprehberger/next-api-middleware/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/next-api-middleware/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@philiprehberger/next-api-middleware.svg)](https://www.npmjs.com/package/@philiprehberger/next-api-middleware)
 [![License](https://img.shields.io/github/license/philiprehberger/next-api-middleware)](LICENSE)
 
@@ -69,7 +69,7 @@ export const GET = compose(
 );
 ```
 
-## API Reference
+## API
 
 ### Composition
 
@@ -92,7 +92,7 @@ export const GET = compose(
 | `csrfProtection` | `(options?: CsrfOptions) => MiddlewareHandler` | Validates CSRF token on unsafe methods (POST, PUT, DELETE, PATCH). |
 | `generateCsrfToken` | `(options?: CsrfOptions) => { token, cookieName, headerName }` | Generate a CSRF token and config for client-side usage. |
 
-**CsrfOptions:** `headerName` (default: `"x-csrf-token"`), `cookieName` (default: `"__csrf"`), `tokenLength` (default: 32), `allowedOrigins` (skip token check for trusted origins).
+**CsrfOptions:** `headerName` (default: `"x-csrf-token"`), `cookieName` (default: `"__csrf"`), `tokenLength` (default: 32), `allowedOrigins` (skip token check for trusted origins)
 
 ### Security Headers
 
